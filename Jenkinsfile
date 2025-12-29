@@ -50,7 +50,7 @@ pipeline {
 
             }
         }
-        stage('Approval')
+        stage('Approval') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -62,6 +62,7 @@ pipeline {
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
+        }    
     }
 
 
